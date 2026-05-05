@@ -1,618 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MrX Men's Mode – Adajan, Surat</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MrX Men's Mode – Adajan, Surat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-curtain" id="loaderCurtain"></div>
-  <div class="loader-line" style="left:50%"></div>
-  <div class="loader-brand">MrX</div>
-  <div class="loader-sub">Men's Mode · Adajan, Surat</div>
-  <div class="loader-progress"></div>
-</div>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">↑</button>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-blur"></div>
-  <a href="#" class="nav-logo">MrX <span>Men's</span></a>
-  <ul class="nav-links">
-    <li><a href="#categories">Collections</a></li>
-    <li><a href="#products">Shop</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button class="nav-cart">🛍 Cart (0)</button>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.022 0-2.022-.312-2.847-.903C5.597 4.31 4.74 2.91 4.74 1.352c0-1.56.856-3.019 2.313-3.746 1.457-.727 3.332-.727 4.789 0 1.457.727 2.313 2.186 2.313 3.746 0 1.559-.856 3.019-2.312 3.746-1.457.727-3.332.727-4.79 0" />
+    </svg>
+  </a>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-curtain" id="loaderCurtain"></div>
+    <div class="loader-line" style="left:50%"></div>
+    <div class="loader-brand">MrX</div>
+    <div class="loader-sub">Men's Mode · Adajan, Surat</div>
+    <div class="loader-progress"></div>
   </div>
-</nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-tag">New Collection 2025</div>
-    <h1 class="hero-title">
-      DRESS<br>
-      <span class="gold">YOUR</span><br>
-      BEST
-    </h1>
-    <div class="hero-italic">Mode. Style. Confidence.</div>
-    <p class="hero-desc">
-      Surat's finest men's fashion destination. From premium shirts and ethnic kurtas to sharp formals — curated for the modern Gujarati man.
-    </p>
-    <div class="hero-ctas">
-      <a href="#products" class="btn-primary"><span>Shop Now</span></a>
-      <a href="#categories" class="btn-secondary">
-        View Collections
-        <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
-          <path d="M0 5H14M10 1L14 5L10 9" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">500+</span>
-        <span class="stat-label">Styles</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">12+</span>
-        <span class="stat-label">Brands</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">4.8★</span>
-        <span class="stat-label">Rating</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-img-container">
-      <div class="clothing-showcase">
-        <!-- Shirt Card 1 - Main -->
-        <div class="cloth-card" style="position:relative; transform:none; opacity:1; z-index:3;">
-          <div class="shirt-graphic shirt-1">
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <path d="M30 10 L10 30 L25 35 L20 80 L80 80 L75 35 L90 30 L70 10 L60 20 Q50 15 40 20 Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-              <rect x="40" y="10" width="20" height="20" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-              <line x1="50" y1="30" x2="50" y2="75" stroke="rgba(201,168,76,0.5)" stroke-width="0.5"/>
-            </svg>
-            <span class="shirt-tag">PREMIUM SHIRT</span>
-            MrX Collection
-          </div>
-        </div>
-        <!-- Shirt Card 2 -->
-        <div class="cloth-card" style="z-index:2;">
-          <div class="shirt-graphic shirt-2">
-            <svg width="80" height="100" viewBox="0 0 80 100" fill="none">
-              <rect x="10" y="5" width="60" height="90" rx="2" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-              <rect x="10" y="5" width="60" height="12" fill="rgba(255,255,255,0.15)"/>
-              <line x1="15" y1="25" x2="65" y2="25" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
-              <line x1="15" y1="35" x2="65" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
-            </svg>
-            <span class="shirt-tag">KURTA</span>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="cloth-card" style="z-index:1;">
-          <div class="shirt-graphic shirt-3">
-            <svg width="80" height="100" viewBox="0 0 80 100" fill="none">
-              <path d="M15 10 L15 90 L65 90 L65 10 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-              <path d="M15 10 Q40 5 65 10" stroke="rgba(201,168,76,0.4)" stroke-width="1" fill="none"/>
-              <rect x="28" y="88" width="24" height="6" fill="rgba(255,255,255,0.1)"/>
-            </svg>
-            <span class="shirt-tag">TROUSERS</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-badge">
-      <div class="hero-badge-inner">NEW<br>2025<br>★</div>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-blur"></div>
+    <a href="#" class="nav-logo">MrX <span>Men's</span></a>
+    <ul class="nav-links">
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-menu-toggle" id="menuToggle">☰</button>
+  </nav>
 
-<!-- MARQUEE -->
-<div class="marquee-wrapper">
-  <div class="marquee-track" id="marquee">
-    <div class="marquee-item"><span class="marquee-dot"></span> Premium Shirts</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Formal Suits</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Ethnic Kurtas</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Designer Jeans</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Casual T-Shirts</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Party Wear</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Winter Collection</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Accessories</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Premium Shirts</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Formal Suits</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Ethnic Kurtas</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Designer Jeans</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Casual T-Shirts</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Party Wear</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Winter Collection</div>
-    <div class="marquee-item"><span class="marquee-dot"></span> Accessories</div>
-  </div>
-</div>
-
-<!-- CATEGORIES -->
-<section id="categories">
-  <div class="container">
-    <div class="section-tag reveal">Curated For You</div>
-    <h2 class="section-title reveal">SHOP BY<br>CATEGORY</h2>
-    <div class="section-sub reveal">Find your perfect style</div>
-
-    <div class="categories-grid">
-      <!-- Featured: Shirts -->
-      <div class="cat-card reveal">
-        <div class="cat-bg">
-          <div class="cat-illus cat-illus-shirts">
-            <!-- Animated shirt illustration -->
-            <svg width="250" height="350" viewBox="0 0 250 350" fill="none" opacity="0.7">
-              <path d="M80 30 L30 80 L65 95 L55 250 L195 250 L185 95 L220 80 L170 30 L150 55 Q125 48 100 55 Z" fill="#1e3a5c" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
-              <path d="M100 55 Q125 42 150 55 L145 75 Q125 65 105 75 Z" fill="#152d4a" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
-              <line x1="125" y1="75" x2="125" y2="245" stroke="rgba(201,168,76,0.3)" stroke-width="0.8" stroke-dasharray="4 4"/>
-              <circle cx="125" cy="100" r="3" fill="rgba(201,168,76,0.6)"/>
-              <circle cx="125" cy="130" r="3" fill="rgba(201,168,76,0.6)"/>
-              <circle cx="125" cy="160" r="3" fill="rgba(201,168,76,0.6)"/>
-              <circle cx="125" cy="190" r="3" fill="rgba(201,168,76,0.6)"/>
-            </svg>
-          </div>
-        </div>
-        <div class="cat-overlay"></div>
-        <div class="cat-content">
-          <div class="cat-name">SHIRTS & TOPS</div>
-          <div class="cat-count">120+ Styles</div>
-          <div class="cat-arrow">Shop Now →</div>
-        </div>
-      </div>
-
-      <!-- Jeans -->
-      <div class="cat-card reveal delay-1">
-        <div class="cat-bg">
-          <div class="cat-illus cat-illus-jeans">
-            <svg width="160" height="280" viewBox="0 0 160 280" fill="none" opacity="0.7">
-              <path d="M20 10 L25 140 L10 270 L60 270 L80 160 L100 270 L150 270 L135 140 L140 10 Z" fill="#1c3461" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
-              <path d="M20 10 L140 10 L145 50 L15 50 Z" fill="#14284d" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-              <line x1="80" y1="10" x2="80" y2="270" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-              <path d="M30 50 Q35 80 32 100" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none"/>
-            </svg>
-          </div>
-        </div>
-        <div class="cat-overlay"></div>
-        <div class="cat-content">
-          <div class="cat-name">JEANS & BOTTOMS</div>
-          <div class="cat-count">80+ Styles</div>
-          <div class="cat-arrow">Shop Now →</div>
-        </div>
-      </div>
-
-      <!-- Ethnic -->
-      <div class="cat-card reveal delay-2">
-        <div class="cat-bg">
-          <div class="cat-illus cat-illus-ethnic">
-            <svg width="180" height="300" viewBox="0 0 180 300" fill="none" opacity="0.7">
-              <path d="M60 10 L40 280 L90 280 L90 160 L90 280 L140 280 L120 10 Z" fill="#3d2200" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-              <path d="M55 10 L125 10 L120 30 L60 30 Z" fill="#2a1500" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
-              <path d="M40 280 L140 280 L135 295 L45 295 Z" fill="#2a1500" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-              <path d="M60 30 Q90 20 120 30 L115 50 Q90 38 75 50 Z" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-              <!-- Pattern details -->
-              <circle cx="90" cy="80" r="4" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-              <circle cx="90" cy="80" r="8" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
-              <path d="M70 110 Q90 100 110 110" stroke="rgba(201,168,76,0.25)" stroke-width="0.8" fill="none"/>
-              <path d="M65 125 Q90 115 115 125" stroke="rgba(201,168,76,0.2)" stroke-width="0.6" fill="none"/>
-            </svg>
-          </div>
-        </div>
-        <div class="cat-overlay"></div>
-        <div class="cat-content">
-          <div class="cat-name">ETHNIC WEAR</div>
-          <div class="cat-count">60+ Styles</div>
-          <div class="cat-arrow">Shop Now →</div>
-        </div>
-      </div>
-
-      <!-- Suits -->
-      <div class="cat-card reveal delay-3">
-        <div class="cat-bg">
-          <div class="cat-illus cat-illus-suits">
-            <svg width="200" height="300" viewBox="0 0 200 300" fill="none" opacity="0.8">
-              <path d="M60 10 L30 60 L65 70 L55 260 L145 260 L135 70 L170 60 L140 10 L120 40 Q100 32 80 40 Z" fill="#1a1a1a" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
-              <path d="M80 40 Q100 30 120 40 L115 65 Q100 55 85 65 Z" fill="#111" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-              <!-- Lapels -->
-              <path d="M80 40 L65 70 L100 100 Z" fill="#222" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-              <path d="M120 40 L135 70 L100 100 Z" fill="#222" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-              <!-- Pocket square -->
-              <path d="M65 110 L80 108 L78 120 L63 122 Z" fill="rgba(201,168,76,0.3)" stroke="rgba(201,168,76,0.5)" stroke-width="0.5"/>
-              <!-- Buttons -->
-              <circle cx="100" cy="130" r="3" fill="rgba(201,168,76,0.5)"/>
-              <circle cx="100" cy="150" r="3" fill="rgba(201,168,76,0.5)"/>
-              <circle cx="100" cy="170" r="3" fill="rgba(201,168,76,0.5)"/>
-            </svg>
-          </div>
-        </div>
-        <div class="cat-overlay"></div>
-        <div class="cat-content">
-          <div class="cat-name">SUITS & FORMALS</div>
-          <div class="cat-count">40+ Styles</div>
-          <div class="cat-arrow">Shop Now →</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <div class="container">
-    <div class="products-header">
-      <div>
-        <div class="section-tag reveal">Hand Picked</div>
-        <h2 class="section-title reveal">TRENDING<br>NOW</h2>
-      </div>
-      <div class="filter-tabs reveal">
-        <button class="filter-tab active" onclick="filterProducts(this, 'all')">All</button>
-        <button class="filter-tab" onclick="filterProducts(this, 'shirts')">Shirts</button>
-        <button class="filter-tab" onclick="filterProducts(this, 'ethnic')">Ethnic</button>
-        <button class="filter-tab" onclick="filterProducts(this, 'formal')">Formal</button>
-      </div>
-    </div>
-
-    <div class="products-grid" id="productsGrid">
-      <!-- Product 1 -->
-      <div class="product-card reveal" data-cat="shirts">
-        <div class="product-img">
-          <div class="product-img-bg" style="background: linear-gradient(135deg, #1e3a5f, #2d5f8a); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-            <svg width="120" height="160" viewBox="0 0 120 160" fill="none">
-              <path d="M40 15 L15 40 L32 47 L28 130 L92 130 L88 47 L105 40 L80 15 L72 28 Q60 23 48 28 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-              <line x1="60" y1="35" x2="60" y2="125" stroke="rgba(201,168,76,0.4)" stroke-width="0.6" stroke-dasharray="3 3"/>
-              <circle cx="60" cy="55" r="2.5" fill="rgba(255,255,255,0.6)"/>
-              <circle cx="60" cy="72" r="2.5" fill="rgba(255,255,255,0.6)"/>
-              <circle cx="60" cy="89" r="2.5" fill="rgba(255,255,255,0.6)"/>
-            </svg>
-          </div>
-          <div class="product-tag-badge">New</div>
-          <button class="product-wishlist">♡</button>
-          <div class="product-quick">Quick Add +</div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">MrX Signature</div>
-          <div class="product-name">Oxford Cotton Formal Shirt</div>
-          <div class="product-price">
-            <span class="price-current">₹899</span>
-            <span class="price-old">₹1,299</span>
-            <span class="price-discount">-31%</span>
-          </div>
-          <div class="product-sizes">
-            <div class="size-dot">S</div><div class="size-dot">M</div><div class="size-dot">L</div><div class="size-dot">XL</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product-card reveal delay-1" data-cat="ethnic">
-        <div class="product-img">
-          <div class="product-img-bg" style="background: linear-gradient(135deg, #2a1200, #5c2e00); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-            <svg width="100" height="170" viewBox="0 0 100 170" fill="none">
-              <path d="M30 10 L20 160 L50 160 L50 90 L50 160 L80 160 L70 10 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-              <path d="M28 10 L72 10 L68 25 L32 25 Z" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-              <circle cx="50" cy="45" r="3" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8"/>
-              <path d="M35 65 Q50 58 65 65" stroke="rgba(201,168,76,0.3)" stroke-width="0.7" fill="none"/>
-              <path d="M33 78 Q50 70 67 78" stroke="rgba(201,168,76,0.25)" stroke-width="0.6" fill="none"/>
-            </svg>
-          </div>
-          <div class="product-tag-badge" style="background:#c9a84c; color:#000;">Festive</div>
-          <button class="product-wishlist">♡</button>
-          <div class="product-quick">Quick Add +</div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">MrX Ethnic</div>
-          <div class="product-name">Cotton Embroidered Kurta</div>
-          <div class="product-price">
-            <span class="price-current">₹1,199</span>
-            <span class="price-old">₹1,799</span>
-            <span class="price-discount">-33%</span>
-          </div>
-          <div class="product-sizes">
-            <div class="size-dot">S</div><div class="size-dot">M</div><div class="size-dot">L</div><div class="size-dot">XL</div><div class="size-dot">XXL</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card reveal delay-2" data-cat="formal">
-        <div class="product-img">
-          <div class="product-img-bg" style="background: linear-gradient(135deg, #111, #252525); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-            <svg width="130" height="170" viewBox="0 0 130 170" fill="none">
-              <path d="M35 8 L18 38 L40 45 L34 155 L96 155 L90 45 L112 38 L95 8 L80 25 Q65 20 50 25 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
-              <path d="M50 25 L40 45 L65 65 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-              <path d="M80 25 L90 45 L65 65 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-              <path d="M40 73 L52 71 L50 80 L38 82 Z" fill="rgba(201,168,76,0.25)" stroke="rgba(201,168,76,0.5)" stroke-width="0.5"/>
-              <circle cx="65" cy="95" r="2" fill="rgba(201,168,76,0.6)"/>
-              <circle cx="65" cy="110" r="2" fill="rgba(201,168,76,0.6)"/>
-              <circle cx="65" cy="125" r="2" fill="rgba(201,168,76,0.6)"/>
-            </svg>
-          </div>
-          <button class="product-wishlist">♡</button>
-          <div class="product-quick">Quick Add +</div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">MrX Premium</div>
-          <div class="product-name">Slim Fit Blazer – Charcoal</div>
-          <div class="product-price">
-            <span class="price-current">₹3,499</span>
-            <span class="price-old">₹4,999</span>
-            <span class="price-discount">-30%</span>
-          </div>
-          <div class="product-sizes">
-            <div class="size-dot">38</div><div class="size-dot">40</div><div class="size-dot">42</div><div class="size-dot">44</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card reveal delay-3" data-cat="shirts">
-        <div class="product-img">
-          <div class="product-img-bg" style="background: linear-gradient(135deg, #1a3010, #2d5018); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-            <svg width="120" height="130" viewBox="0 0 120 130" fill="none">
-              <rect x="10" y="10" width="100" height="110" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-              <path d="M10 10 Q60 5 110 10 L110 35 Q60 30 10 35 Z" fill="rgba(255,255,255,0.12)"/>
-              <text x="60" y="75" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11" font-family="DM Sans" letter-spacing="3">MRX</text>
-            </svg>
-          </div>
-          <div class="product-tag-badge">Trending</div>
-          <button class="product-wishlist">♡</button>
-          <div class="product-quick">Quick Add +</div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">MrX Casual</div>
-          <div class="product-name">Graphic Printed T-Shirt</div>
-          <div class="product-price">
-            <span class="price-current">₹499</span>
-            <span class="price-old">₹799</span>
-            <span class="price-discount">-38%</span>
-          </div>
-          <div class="product-sizes">
-            <div class="size-dot">S</div><div class="size-dot">M</div><div class="size-dot">L</div><div class="size-dot">XL</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SALE BANNER -->
-<section id="banner">
-  <div class="banner-inner">
-    <div class="banner-content">
-      <div class="section-tag reveal">Limited Time</div>
-      <h2 class="banner-title reveal">
-        SUMMER<br>
-        <em>SALE</em>
-        UPTO<br>50% OFF
-      </h2>
-      <p class="banner-desc reveal">
-        Shop our exclusive summer clearance on shirts, kurtas, and more. New arrivals added every week. Visit us in Adajan or order online.
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-tag">New Collection 2025</div>
+      <h1 class="hero-title">
+        DRESS<br>
+        <span class="gold">YOUR</span><br>
+        BEST
+      </h1>
+      <div class="hero-italic">Mode. Style. Confidence.</div>
+      <p class="hero-desc">
+        Surat's finest men's fashion destination. From premium shirts and ethnic kurtas to sharp formals — curated for
+        the modern Gujarati man.
       </p>
-      <a href="#products" class="btn-primary reveal" style="align-self:flex-start;"><span>Grab Deals →</span></a>
-    </div>
-    <div class="banner-visual">
-      <div class="banner-circle" style="width:300px; height:300px;"></div>
-      <div class="banner-circle" style="width:220px; height:220px; animation-delay:0.5s;"></div>
-      <div class="banner-circle" style="width:140px; height:140px; animation-delay:1s;"></div>
-      <div style="text-align:center; z-index:2; position:relative;">
-        <div style="font-family:'Bebas Neue',sans-serif; font-size:90px; color:var(--gold); line-height:1; letter-spacing:0.05em;">50%</div>
-        <div style="font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold-light);">OFF SELECTED STYLES</div>
-        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:rgba(245,240,232,0.6); margin-top:8px;">This Weekend Only</div>
+      <div class="hero-ctas">
+        <a href="#products" class="btn-primary"><span>Shop Now</span></a>
+        <a href="#categories" class="btn-secondary">
+          View Collections
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+            <path d="M0 5H14M10 1L14 5L10 9" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
       </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Styles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Brands</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4.8★</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-container">
+        <div class="clothing-showcase">
+          <!-- Shirt Card 1 - Main -->
+          <div class="cloth-card" style="position:relative; transform:none; opacity:1; z-index:3;">
+            <div class="shirt-graphic shirt-1">
+              <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
+                <path d="M30 10 L10 30 L25 35 L20 80 L80 80 L75 35 L90 30 L70 10 L60 20 Q50 15 40 20 Z"
+                  fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                <rect x="40" y="10" width="20" height="20" rx="10" fill="rgba(255,255,255,0.05)"
+                  stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <line x1="50" y1="30" x2="50" y2="75" stroke="rgba(201,168,76,0.5)" stroke-width="0.5" />
+              </svg>
+              <span class="shirt-tag">PREMIUM SHIRT</span>
+              MrX Collection
+            </div>
+          </div>
+          <!-- Shirt Card 2 -->
+          <div class="cloth-card" style="z-index:2;">
+            <div class="shirt-graphic shirt-2">
+              <svg width="80" height="100" viewBox="0 0 80 100" fill="none">
+                <rect x="10" y="5" width="60" height="90" rx="2" fill="rgba(255,255,255,0.1)"
+                  stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <rect x="10" y="5" width="60" height="12" fill="rgba(255,255,255,0.15)" />
+                <line x1="15" y1="25" x2="65" y2="25" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
+                <line x1="15" y1="35" x2="65" y2="35" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
+              </svg>
+              <span class="shirt-tag">KURTA</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="cloth-card" style="z-index:1;">
+            <div class="shirt-graphic shirt-3">
+              <svg width="80" height="100" viewBox="0 0 80 100" fill="none">
+                <path d="M15 10 L15 90 L65 90 L65 10 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)"
+                  stroke-width="1" />
+                <path d="M15 10 Q40 5 65 10" stroke="rgba(201,168,76,0.4)" stroke-width="1" fill="none" />
+                <rect x="28" y="88" width="24" height="6" fill="rgba(255,255,255,0.1)" />
+              </svg>
+              <span class="shirt-tag">TROUSERS</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-inner">NEW<br>2025<br>★</div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="marquee">
+      <div class="marquee-item"><span class="marquee-dot"></span> Premium Shirts</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Formal Suits</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Ethnic Kurtas</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Designer Jeans</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Casual T-Shirts</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Party Wear</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Winter Collection</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Accessories</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Premium Shirts</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Formal Suits</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Ethnic Kurtas</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Designer Jeans</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Casual T-Shirts</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Party Wear</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Winter Collection</div>
+      <div class="marquee-item"><span class="marquee-dot"></span> Accessories</div>
     </div>
   </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-tag reveal">Happy Customers</div>
-    <h2 class="section-title reveal">WHAT SURAT<br>IS SAYING</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Best men's fashion store in Adajan! The collection is always fresh and the staff helps you find the perfect fit. My go-to shop for every occasion.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">RJ</div>
-          <div>
-            <div class="author-name">Rahul Joshi</div>
-            <div class="author-loc">Adajan, Surat</div>
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="container">
+      <div class="section-tag reveal">Curated For You</div>
+      <h2 class="section-title reveal">SHOP BY<br>CATEGORY</h2>
+      <div class="section-sub reveal">Find your perfect style</div>
+
+      <div class="categories-grid">
+        <!-- Featured: Shirts -->
+        <div class="cat-card reveal">
+          <div class="cat-bg">
+            <div class="cat-illus cat-illus-shirts">
+              <!-- Animated shirt illustration -->
+              <svg width="250" height="350" viewBox="0 0 250 350" fill="none" opacity="0.7">
+                <path d="M80 30 L30 80 L65 95 L55 250 L195 250 L185 95 L220 80 L170 30 L150 55 Q125 48 100 55 Z"
+                  fill="#1e3a5c" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" />
+                <path d="M100 55 Q125 42 150 55 L145 75 Q125 65 105 75 Z" fill="#152d4a" stroke="rgba(201,168,76,0.3)"
+                  stroke-width="1" />
+                <line x1="125" y1="75" x2="125" y2="245" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"
+                  stroke-dasharray="4 4" />
+                <circle cx="125" cy="100" r="3" fill="rgba(201,168,76,0.6)" />
+                <circle cx="125" cy="130" r="3" fill="rgba(201,168,76,0.6)" />
+                <circle cx="125" cy="160" r="3" fill="rgba(201,168,76,0.6)" />
+                <circle cx="125" cy="190" r="3" fill="rgba(201,168,76,0.6)" />
+              </svg>
+            </div>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">SHIRTS & TOPS</div>
+            <div class="cat-count">120+ Styles</div>
+            <div class="cat-arrow">Shop Now →</div>
           </div>
         </div>
-      </div>
-      <div class="testimonial-card reveal delay-2">
-        <div class="stars">★★★★★</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Got my whole wedding wardrobe from MrX Men's Mode. Kurta set, blazer, sherwanis — everything was top quality and reasonably priced. Highly recommend!</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">MP</div>
-          <div>
-            <div class="author-name">Mihir Patel</div>
-            <div class="author-loc">Vesu, Surat</div>
+
+        <!-- Jeans -->
+        <div class="cat-card reveal delay-1">
+          <div class="cat-bg">
+            <div class="cat-illus cat-illus-jeans">
+              <svg width="160" height="280" viewBox="0 0 160 280" fill="none" opacity="0.7">
+                <path d="M20 10 L25 140 L10 270 L60 270 L80 160 L100 270 L150 270 L135 140 L140 10 Z" fill="#1c3461"
+                  stroke="rgba(201,168,76,0.3)" stroke-width="1" />
+                <path d="M20 10 L140 10 L145 50 L15 50 Z" fill="#14284d" stroke="rgba(201,168,76,0.2)"
+                  stroke-width="1" />
+                <line x1="80" y1="10" x2="80" y2="270" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <path d="M30 50 Q35 80 32 100" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none" />
+              </svg>
+            </div>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">JEANS & BOTTOMS</div>
+            <div class="cat-count">80+ Styles</div>
+            <div class="cat-arrow">Shop Now →</div>
           </div>
         </div>
-      </div>
-      <div class="testimonial-card reveal delay-4">
-        <div class="stars">★★★★☆</div>
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Great variety of formal shirts and trousers. Good brands at better prices than malls. The location on Anand Mahal Road is very convenient.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">DS</div>
-          <div>
-            <div class="author-name">Dhruvit Shah</div>
-            <div class="author-loc">Pal, Surat</div>
+
+        <!-- Ethnic -->
+        <div class="cat-card reveal delay-2">
+          <div class="cat-bg">
+            <div class="cat-illus cat-illus-ethnic">
+              <svg width="180" height="300" viewBox="0 0 180 300" fill="none" opacity="0.7">
+                <path d="M60 10 L40 280 L90 280 L90 160 L90 280 L140 280 L120 10 Z" fill="#3d2200"
+                  stroke="rgba(201,168,76,0.4)" stroke-width="1" />
+                <path d="M55 10 L125 10 L120 30 L60 30 Z" fill="#2a1500" stroke="rgba(201,168,76,0.5)"
+                  stroke-width="1" />
+                <path d="M40 280 L140 280 L135 295 L45 295 Z" fill="#2a1500" stroke="rgba(201,168,76,0.4)"
+                  stroke-width="1" />
+                <path d="M60 30 Q90 20 120 30 L115 50 Q90 38 75 50 Z" fill="rgba(201,168,76,0.2)"
+                  stroke="rgba(201,168,76,0.5)" stroke-width="0.8" />
+                <!-- Pattern details -->
+                <circle cx="90" cy="80" r="4" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="0.8" />
+                <circle cx="90" cy="80" r="8" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="0.5" />
+                <path d="M70 110 Q90 100 110 110" stroke="rgba(201,168,76,0.25)" stroke-width="0.8" fill="none" />
+                <path d="M65 125 Q90 115 115 125" stroke="rgba(201,168,76,0.2)" stroke-width="0.6" fill="none" />
+              </svg>
+            </div>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">ETHNIC WEAR</div>
+            <div class="cat-count">60+ Styles</div>
+            <div class="cat-arrow">Shop Now →</div>
+          </div>
+        </div>
+
+        <!-- Suits -->
+        <div class="cat-card reveal delay-3">
+          <div class="cat-bg">
+            <div class="cat-illus cat-illus-suits">
+              <svg width="200" height="300" viewBox="0 0 200 300" fill="none" opacity="0.8">
+                <path d="M60 10 L30 60 L65 70 L55 260 L145 260 L135 70 L170 60 L140 10 L120 40 Q100 32 80 40 Z"
+                  fill="#1a1a1a" stroke="rgba(201,168,76,0.4)" stroke-width="1.2" />
+                <path d="M80 40 Q100 30 120 40 L115 65 Q100 55 85 65 Z" fill="#111" stroke="rgba(201,168,76,0.4)"
+                  stroke-width="1" />
+                <!-- Lapels -->
+                <path d="M80 40 L65 70 L100 100 Z" fill="#222" stroke="rgba(201,168,76,0.3)" stroke-width="0.8" />
+                <path d="M120 40 L135 70 L100 100 Z" fill="#222" stroke="rgba(201,168,76,0.3)" stroke-width="0.8" />
+                <!-- Pocket square -->
+                <path d="M65 110 L80 108 L78 120 L63 122 Z" fill="rgba(201,168,76,0.3)" stroke="rgba(201,168,76,0.5)"
+                  stroke-width="0.5" />
+                <!-- Buttons -->
+                <circle cx="100" cy="130" r="3" fill="rgba(201,168,76,0.5)" />
+                <circle cx="100" cy="150" r="3" fill="rgba(201,168,76,0.5)" />
+                <circle cx="100" cy="170" r="3" fill="rgba(201,168,76,0.5)" />
+              </svg>
+            </div>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-name">SUITS & FORMALS</div>
+            <div class="cat-count">40+ Styles</div>
+            <div class="cat-arrow">Shop Now →</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FEATURES -->
-<section id="features">
-  <div class="container">
-    <div class="features-grid">
-      <div class="feature-item reveal">
-        <div class="feature-icon">🏪</div>
-        <div class="feature-title">Walk-In Store</div>
-        <p class="feature-desc">Visit us at Anand Mahal Road, Adajan — open 7 days a week</p>
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <div class="section-tag reveal">Hand Picked</div>
+          <h2 class="section-title reveal">TRENDING<br>NOW</h2>
+        </div>
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" onclick="filterProducts(this, 'all')">All</button>
+          <button class="filter-tab" onclick="filterProducts(this, 'shirts')">Shirts</button>
+          <button class="filter-tab" onclick="filterProducts(this, 'ethnic')">Ethnic</button>
+          <button class="filter-tab" onclick="filterProducts(this, 'formal')">Formal</button>
+        </div>
       </div>
-      <div class="feature-item reveal delay-1">
-        <div class="feature-icon">✂️</div>
-        <div class="feature-title">Perfect Fit</div>
-        <p class="feature-desc">Expert alteration & tailoring advice included with every purchase</p>
-      </div>
-      <div class="feature-item reveal delay-2">
-        <div class="feature-icon">🏷️</div>
-        <div class="feature-title">Best Prices</div>
-        <p class="feature-desc">Premium brands at prices that make sense for Surat's buyers</p>
-      </div>
-      <div class="feature-item reveal delay-3">
-        <div class="feature-icon">🔄</div>
-        <div class="feature-title">Easy Exchange</div>
-        <p class="feature-desc">Hassle-free size exchange on all garments within 7 days</p>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Product 1 -->
+        <div class="product-card reveal" data-cat="shirts">
+          <div class="product-img">
+            <div class="product-img-bg"
+              style="background: linear-gradient(135deg, #1e3a5f, #2d5f8a); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+              <svg width="120" height="160" viewBox="0 0 120 160" fill="none">
+                <path d="M40 15 L15 40 L32 47 L28 130 L92 130 L88 47 L105 40 L80 15 L72 28 Q60 23 48 28 Z"
+                  fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                <line x1="60" y1="35" x2="60" y2="125" stroke="rgba(201,168,76,0.4)" stroke-width="0.6"
+                  stroke-dasharray="3 3" />
+                <circle cx="60" cy="55" r="2.5" fill="rgba(255,255,255,0.6)" />
+                <circle cx="60" cy="72" r="2.5" fill="rgba(255,255,255,0.6)" />
+                <circle cx="60" cy="89" r="2.5" fill="rgba(255,255,255,0.6)" />
+              </svg>
+            </div>
+            <div class="product-tag-badge">New</div>
+            <button class="product-wishlist">♡</button>
+            <button class="product-contact-btn"
+              onclick="openContactModal({name: 'Oxford Cotton Formal Shirt', price: '₹899', image: 'gradient(135deg, #1e3a5f, #2d5f8a)'})">Check
+              Availability</button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">MrX Signature</div>
+            <div class="product-name">Oxford Cotton Formal Shirt</div>
+            <div class="product-price">
+              <span class="price-current">₹899</span>
+              <span class="price-old">₹1,299</span>
+              <span class="price-discount">-31%</span>
+            </div>
+            <div class="product-sizes">
+              <div class="size-dot">S</div>
+              <div class="size-dot">M</div>
+              <div class="size-dot">L</div>
+              <div class="size-dot">XL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal delay-1" data-cat="ethnic">
+          <div class="product-img">
+            <div class="product-img-bg"
+              style="background: linear-gradient(135deg, #2a1200, #5c2e00); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+              <svg width="100" height="170" viewBox="0 0 100 170" fill="none">
+                <path d="M30 10 L20 160 L50 160 L50 90 L50 160 L80 160 L70 10 Z" fill="rgba(255,255,255,0.1)"
+                  stroke="rgba(201,168,76,0.4)" stroke-width="1" />
+                <path d="M28 10 L72 10 L68 25 L32 25 Z" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.5)"
+                  stroke-width="0.8" />
+                <circle cx="50" cy="45" r="3" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="0.8" />
+                <path d="M35 65 Q50 58 65 65" stroke="rgba(201,168,76,0.3)" stroke-width="0.7" fill="none" />
+                <path d="M33 78 Q50 70 67 78" stroke="rgba(201,168,76,0.25)" stroke-width="0.6" fill="none" />
+              </svg>
+            </div>
+            <div class="product-tag-badge" style="background:#c9a84c; color:#000;">Festive</div>
+            <button class="product-wishlist">♡</button>
+            <button class="product-contact-btn"
+              onclick="openContactModal({name: 'Cotton Embroidered Kurta', price: '₹1,199', image: 'gradient(135deg, #2a1200, #5c2e00)'})">Check
+              Availability</button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">MrX Ethnic</div>
+            <div class="product-name">Cotton Embroidered Kurta</div>
+            <div class="product-price">
+              <span class="price-current">₹1,199</span>
+              <span class="price-old">₹1,799</span>
+              <span class="price-discount">-33%</span>
+            </div>
+            <div class="product-sizes">
+              <div class="size-dot">S</div>
+              <div class="size-dot">M</div>
+              <div class="size-dot">L</div>
+              <div class="size-dot">XL</div>
+              <div class="size-dot">XXL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal delay-2" data-cat="formal">
+          <div class="product-img">
+            <div class="product-img-bg"
+              style="background: linear-gradient(135deg, #111, #252525); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+              <svg width="130" height="170" viewBox="0 0 130 170" fill="none">
+                <path d="M35 8 L18 38 L40 45 L34 155 L96 155 L90 45 L112 38 L95 8 L80 25 Q65 20 50 25 Z"
+                  fill="rgba(255,255,255,0.08)" stroke="rgba(201,168,76,0.4)" stroke-width="1.2" />
+                <path d="M50 25 L40 45 L65 65 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(201,168,76,0.3)"
+                  stroke-width="0.8" />
+                <path d="M80 25 L90 45 L65 65 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(201,168,76,0.3)"
+                  stroke-width="0.8" />
+                <path d="M40 73 L52 71 L50 80 L38 82 Z" fill="rgba(201,168,76,0.25)" stroke="rgba(201,168,76,0.5)"
+                  stroke-width="0.5" />
+                <circle cx="65" cy="95" r="2" fill="rgba(201,168,76,0.6)" />
+                <circle cx="65" cy="110" r="2" fill="rgba(201,168,76,0.6)" />
+                <circle cx="65" cy="125" r="2" fill="rgba(201,168,76,0.6)" />
+              </svg>
+            </div>
+            <button class="product-wishlist">♡</button>
+            <button class="product-contact-btn"
+              onclick="openContactModal({name: 'Slim Fit Blazer – Charcoal', price: '₹3,499', image: 'gradient(135deg, #111, #252525)'})">Check
+              Availability</button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">MrX Premium</div>
+            <div class="product-name">Slim Fit Blazer – Charcoal</div>
+            <div class="product-price">
+              <span class="price-current">₹3,499</span>
+              <span class="price-old">₹4,999</span>
+              <span class="price-discount">-30%</span>
+            </div>
+            <div class="product-sizes">
+              <div class="size-dot">38</div>
+              <div class="size-dot">40</div>
+              <div class="size-dot">42</div>
+              <div class="size-dot">44</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal delay-3" data-cat="shirts">
+          <div class="product-img">
+            <div class="product-img-bg"
+              style="background: linear-gradient(135deg, #1a3010, #2d5018); width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+              <svg width="120" height="130" viewBox="0 0 120 130" fill="none">
+                <rect x="10" y="10" width="100" height="110" rx="3" fill="rgba(255,255,255,0.1)"
+                  stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+                <path d="M10 10 Q60 5 110 10 L110 35 Q60 30 10 35 Z" fill="rgba(255,255,255,0.12)" />
+                <text x="60" y="75" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11"
+                  font-family="DM Sans" letter-spacing="3">MRX</text>
+              </svg>
+            </div>
+            <div class="product-tag-badge">Trending</div>
+            <button class="product-wishlist">♡</button>
+            <button class="product-contact-btn"
+              onclick="openContactModal({name: 'Graphic Printed T-Shirt', price: '₹499', image: 'gradient(135deg, #1a3010, #2d5018)'})">Check
+              Availability</button>
+          </div>
+          <div class="product-info">
+            <div class="product-brand">MrX Casual</div>
+            <div class="product-name">Graphic Printed T-Shirt</div>
+            <div class="product-price">
+              <span class="price-current">₹499</span>
+              <span class="price-old">₹799</span>
+              <span class="price-discount">-38%</span>
+            </div>
+            <div class="product-sizes">
+              <div class="size-dot">S</div>
+              <div class="size-dot">M</div>
+              <div class="size-dot">L</div>
+              <div class="size-dot">XL</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-tag reveal">Find Us</div>
-    <h2 class="section-title reveal">VISIT THE<br>STORE</h2>
-    <div class="contact-grid">
-      <div class="contact-info reveal-left">
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <div class="contact-label">Address</div>
-            <div class="contact-value">Anand Mahal Road, Adajan Road,<br>Surat – 395009, Gujarat</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <div class="contact-label">Phone</div>
-            <div class="contact-value">+91 (0261) XXX XXXX<br>Call or WhatsApp us</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
-          <div>
-            <div class="contact-label">Store Hours</div>
-            <div class="contact-value">Mon – Sat: 10:00 AM – 9:00 PM<br>Sunday: 11:00 AM – 8:00 PM</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💳</div>
-          <div>
-            <div class="contact-label">We Accept</div>
-            <div class="contact-value">Cash · UPI · Debit/Credit Cards<br>PhonePe · GPay · Paytm</div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal-right">
-        <div class="contact-form">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--gold-light); margin-bottom:24px;">Send us a message — we'll get back to you!</div>
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="e.g. Rahul Patel">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone / WhatsApp</label>
-            <input type="tel" class="form-input" placeholder="+91 98XXX XXXXX">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Ask about a product, bulk order, availability..."></textarea>
-          </div>
-          <button class="btn-primary" style="cursor:none; border:none; align-self:flex-start; padding:16px 40px;"><span>Send Message →</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand-name">MrX</div>
-        <div class="footer-brand-tagline">Men's Mode, Adajan</div>
-        <p style="font-size:14px; color:rgba(245,240,232,0.4); line-height:1.7; max-width:280px; margin-bottom:24px;">
-          Surat's premium destination for men's fashion. Quality garments for every occasion — casual, ethnic, and formal.
+  <!-- SALE BANNER -->
+  <section id="banner">
+    <div class="banner-inner">
+      <div class="banner-content">
+        <div class="section-tag reveal">Limited Time</div>
+        <h2 class="banner-title reveal">
+          SUMMER<br>
+          <em>SALE</em>
+          UPTO<br>50% OFF
+        </h2>
+        <p class="banner-desc reveal">
+          Shop our exclusive summer clearance on shirts, kurtas, and more. New arrivals added every week. Visit us in
+          Adajan or order online.
         </p>
-        <div class="footer-social">
-          <a href="#" class="social-link">f</a>
-          <a href="#" class="social-link">in</a>
-          <a href="#" class="social-link">📷</a>
-          <a href="#" class="social-link">▶</a>
+        <a href="#products" class="btn-primary reveal" style="align-self:flex-start;"><span>Grab Deals →</span></a>
+      </div>
+      <div class="banner-visual">
+        <div class="banner-circle" style="width:300px; height:300px;"></div>
+        <div class="banner-circle" style="width:220px; height:220px; animation-delay:0.5s;"></div>
+        <div class="banner-circle" style="width:140px; height:140px; animation-delay:1s;"></div>
+        <div style="text-align:center; z-index:2; position:relative;">
+          <div
+            style="font-family:'Bebas Neue',sans-serif; font-size:90px; color:var(--gold); line-height:1; letter-spacing:0.05em;">
+            50%</div>
+          <div style="font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold-light);">OFF
+            SELECTED STYLES</div>
+          <div
+            style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:rgba(245,240,232,0.6); margin-top:8px;">
+            This Weekend Only</div>
         </div>
       </div>
-      <div>
-        <div class="footer-heading">Shop</div>
-        <ul class="footer-links">
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Shirts & Tops</a></li>
-          <li><a href="#">Ethnic Wear</a></li>
-          <li><a href="#">Formals</a></li>
-          <li><a href="#">Jeans</a></li>
-          <li><a href="#">Sale</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-heading">Info</div>
-        <ul class="footer-links">
-          <li><a href="#">About MrX</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Store Location</a></li>
-          <li><a href="#">Exchange Policy</a></li>
-          <li><a href="#">Size Guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-heading">Contact</div>
-        <ul class="footer-links">
-          <li><a href="#">📍 Anand Mahal Rd, Adajan</a></li>
-          <li><a href="#">📞 0261-XXX-XXXX</a></li>
-          <li><a href="#">💬 WhatsApp Us</a></li>
-          <li><a href="#">📧 mrxmensmode@gmail.com</a></li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-tag reveal">Happy Customers</div>
+      <h2 class="section-title reveal">WHAT SURAT<br>IS SAYING</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Best men's fashion store in Adajan! The collection is always fresh and the staff
+            helps you find the perfect fit. My go-to shop for every occasion.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RJ</div>
+            <div>
+              <div class="author-name">Rahul Joshi</div>
+              <div class="author-loc">Adajan, Surat</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Got my whole wedding wardrobe from MrX Men's Mode. Kurta set, blazer, sherwanis —
+            everything was top quality and reasonably priced. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MP</div>
+            <div>
+              <div class="author-name">Mihir Patel</div>
+              <div class="author-loc">Vesu, Surat</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-4">
+          <div class="stars">★★★★☆</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Great variety of formal shirts and trousers. Good brands at better prices than
+            malls. The location on Anand Mahal Road is very convenient.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DS</div>
+            <div>
+              <div class="author-name">Dhruvit Shah</div>
+              <div class="author-loc">Pal, Surat</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2025 <span>MrX Men's Mode</span>. All rights reserved. Adajan, Surat.</div>
-      <div class="footer-copy" style="display:flex; gap:20px;">
-        <a href="#" style="color:rgba(245,240,232,0.3); text-decoration:none; font-size:12px;">Privacy</a>
-        <a href="#" style="color:rgba(245,240,232,0.3); text-decoration:none; font-size:12px;">Terms</a>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <div class="feature-icon">🏪</div>
+          <div class="feature-title">Walk-In Store</div>
+          <p class="feature-desc">Visit us at Anand Mahal Road, Adajan — open 7 days a week</p>
+        </div>
+        <div class="feature-item reveal delay-1">
+          <div class="feature-icon">✂️</div>
+          <div class="feature-title">Perfect Fit</div>
+          <p class="feature-desc">Expert alteration & tailoring advice included with every purchase</p>
+        </div>
+        <div class="feature-item reveal delay-2">
+          <div class="feature-icon">🏷️</div>
+          <div class="feature-title">Best Prices</div>
+          <p class="feature-desc">Premium brands at prices that make sense for Surat's buyers</p>
+        </div>
+        <div class="feature-item reveal delay-3">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-title">Easy Exchange</div>
+          <p class="feature-desc">Hassle-free size exchange on all garments within 7 days</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-tag reveal">Find Us</div>
+      <h2 class="section-title reveal">VISIT THE<br>STORE</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value">Anand Mahal Road, Adajan Road,<br>Surat – 395009, Gujarat</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+91 (0261) XXX XXXX<br>Call or WhatsApp us</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-label">Store Hours</div>
+              <div class="contact-value">Mon – Sat: 10:00 AM – 9:00 PM<br>Sunday: 11:00 AM – 8:00 PM</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💳</div>
+            <div>
+              <div class="contact-label">We Accept</div>
+              <div class="contact-value">Cash · UPI · Debit/Credit Cards<br>PhonePe · GPay · Paytm</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="contact-form">
+            <div
+              style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--gold-light); margin-bottom:24px;">
+              Send us a message — we'll get back to you!</div>
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="e.g. Rahul Patel">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp</label>
+              <input type="tel" class="form-input" placeholder="+91 98XXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Ask about a product, bulk order, availability..."></textarea>
+            </div>
+            <button class="btn-primary"
+              style="cursor:none; border:none; align-self:flex-start; padding:16px 40px;"><span>Send Message
+                →</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">MrX</div>
+          <div class="footer-brand-tagline">Men's Mode, Adajan</div>
+          <p style="font-size:14px; color:rgba(245,240,232,0.4); line-height:1.7; max-width:280px; margin-bottom:24px;">
+            Surat's premium destination for men's fashion. Quality garments for every occasion — casual, ethnic, and
+            formal.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Shop</div>
+          <ul class="footer-links">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Shirts & Tops</a></li>
+            <li><a href="#">Ethnic Wear</a></li>
+            <li><a href="#">Formals</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Info</div>
+          <ul class="footer-links">
+            <li><a href="#">About MrX</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Store Location</a></li>
+            <li><a href="#">Exchange Policy</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><a href="#">📍 Anand Mahal Rd, Adajan</a></li>
+            <li><a href="#">📞 0261-XXX-XXXX</a></li>
+            <li><a href="#">💬 WhatsApp Us</a></li>
+            <li><a href="#">📧 mrxmensmode@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 <span>MrX Men's Mode</span>. All rights reserved. Adajan, Surat.</div>
+        <div class="footer-copy" style="display:flex; gap:20px;">
+          <a href="#" style="color:rgba(245,240,232,0.3); text-decoration:none; font-size:12px;">Privacy</a>
+          <a href="#" style="color:rgba(245,240,232,0.3); text-decoration:none; font-size:12px;">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div id="contactModal" class="modal">
+    <div class="modal-overlay" onclick="closeContactModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeContactModal()">✕</button>
+      <div class="modal-header">
+        <div class="modal-product-img" id="modalProductImg"></div>
+        <div class="modal-product-info">
+          <div class="modal-product-name" id="modalProductName">Product Name</div>
+          <div class="modal-product-price" id="modalProductPrice">Price</div>
+          <div style="font-size: 13px; color: rgba(245,240,232,0.6); margin-top: 8px;">Interested in this item?</div>
+        </div>
+      </div>
+      <form class="modal-form" onsubmit="submitContactForm(event)">
+        <div class="form-group">
+          <label class="form-label">Your Name *</label>
+          <input type="text" class="form-input" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-input" placeholder="+91 98XXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email (Optional)</label>
+          <input type="email" class="form-input" placeholder="your.email@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea"
+            placeholder="I&apos;m interested in this product">I'm interested in this product</textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; cursor: none; border: none;"><span>Check
+            Availability →</span></button>
+        <div id="successMessage" class="modal-success"
+          style="display: none; margin-top: 16px; padding: 12px; background: rgba(45,90,39,0.3); border-left: 3px solid #2d5a27; color: rgba(245,240,232,0.9); font-size: 14px;">
+          ✓ Thank you! We will contact you within 24 hours.
+        </div>
+      </form>
     </div>
   </div>
-</footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
