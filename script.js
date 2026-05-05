@@ -114,6 +114,66 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// ===== QUICK VIEW MODAL =====
+let currentQuickViewProduct = null;
+
+function openQuickView(product) {
+  currentQuickViewProduct = product;
+  const modal = document.getElementById("quickViewModal");
+
+  document.getElementById("quickViewName").textContent = product.name;
+  document.getElementById("quickViewPrice").textContent = product.price;
+  document.getElementById("quickViewOldPrice").textContent = product.oldPrice;
+  document.getElementById("quickViewDiscount").textContent =
+    "-" +
+    Math.round(
+      ((parseInt(product.oldPrice.replace("₹", "").replace(",", "")) -
+        parseInt(product.price.replace("₹", "").replace(",", ""))) /
+        parseInt(product.oldPrice.replace("₹", "").replace(",", ""))) *
+        100,
+    ) +
+    "%";
+  document.getElementById("quickViewDesc").textContent = product.description;
+  document.getElementById("quickViewImg").style.background = product.image;
+
+  const sizesContainer = document.getElementById("quickViewSizes");
+  sizesContainer.innerHTML = "";
+  product.sizes.forEach((size) => {
+    const sizeBtn = document.createElement("button");
+    sizeBtn.className = "qv-size-option";
+    sizeBtn.textContent = size;
+    sizeBtn.type = "button";
+    sizeBtn.addEventListener("click", (e) => {
+      document
+        .querySelectorAll(".qv-size-option")
+        .forEach((s) => (s.style.background = "rgba(201,168,76,0.1)"));
+      e.target.style.background = "rgba(201,168,76,0.3)";
+    });
+    sizesContainer.appendChild(sizeBtn);
+  });
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeQuickView() {
+  const modal = document.getElementById("quickViewModal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+  currentQuickViewProduct = null;
+}
+
+function openContactModalFromQuickView() {
+  if (currentQuickViewProduct) {
+    closeQuickView();
+    openContactModal({
+      name: currentQuickViewProduct.name,
+      price: currentQuickViewProduct.price,
+      image: currentQuickViewProduct.image,
+    });
+  }
+}
+
 // ===== CONTACT MODAL =====
 function openContactModal(product) {
   const modal = document.getElementById("contactModal");
@@ -154,9 +214,12 @@ function submitContactForm(e) {
   }, 3000);
 }
 
-// Close modal when pressing Escape
+// Close modals when pressing Escape
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeContactModal();
+  if (e.key === "Escape") {
+    closeContactModal();
+    closeQuickView();
+  }
 });
 
 // ===== WISHLIST TOGGLE =====
